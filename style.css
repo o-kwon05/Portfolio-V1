@@ -3,12 +3,28 @@ html {
 }
 
 body {
-  display: auto;
-  justify-content: center;
-  align-items: center;
-  min-height: 700vh;
-  background-color: #090947;
-  background-image: linear-gradient(315deg, #505085 0%, #5a585a 74%);
+  background: linear-gradient(
+    -45deg,
+    #5a585a,
+    rgb(51, 43, 60),
+    rgb(97, 79, 117),
+    #505085
+  );
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  min-height: 500vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .scroll {
