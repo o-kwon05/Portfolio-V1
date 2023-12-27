@@ -1,0 +1,370 @@
+/* HTML behavior */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Universal attributes/ body */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #22252c;
+    height: 100vh;
+}
+
+/* Makes the top socials section display:flex and positions item into left corner */
+
+.topnav {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+/* puts a padding of 10px between each icons*/
+
+.topnav a {
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+/* positions the dark mode switch */
+
+.switch {
+    position: relative;
+    width: 65px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+/* removes the actual switch box */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* positions and colors the the slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+}
+
+
+/* content is the ball in the slider, left and bottom changes space between slider and ball*/
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    z-index: 2;
+}
+
+#light-icon {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    z-index: 1;
+}
+
+#dark-icon {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 35px;
+    bottom: 4px;
+    z-index: 1;
+}
+
+/* changing style of switch once turned on*/
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+/* moves the ball across the switch*/
+input:checked+.slider:before {
+    -webkit-transform: translateX(31px);
+    -ms-transform: translateX(31px);
+    transform: translateX(31px);
+}
+
+.dark-mode #name,
+.dark-mode .headers,
+.dark-mode #welcome,
+.dark-mode .project-description,
+.dark-mode .section-2 nav a.active {
+    color: #1B1C1D;
+}
+
+.dark-mode {
+    background-color: #D4D7DE;
+
+}
+
+.dark-mode.scroll {
+    text-decoration-color: #D4D7DE;
+}
+
+.dark-mode .projects img {
+    border-color: black;
+}
+
+.dark-mode #college,
+.dark-mode .scroll,
+.dark-mode #intro {
+    color: #595959;
+}
+
+
+
+
+
+
+
+
+.topnav a:hover {
+    scale: 1.2;
+}
+
+
+
+
+.section-2 {
+    position: relative;
+    width: 100%;
+
+    display: inherit;
+
+}
+
+#name {
+    position: fixed;
+    color: #e2e3e4;
+    top: 65px;
+    left: 200px;
+    font-size: 75px;
+    scroll-margin-top: 140px;
+}
+
+#college {
+    padding-top: 10px;
+    position: fixed;
+    color: #a5a5a5;
+    top: 175px;
+    left: 210px;
+}
+
+.section-2 p {
+    position: fixed;
+    color: #e2e3e4;
+    top: 270px;
+    left: 210px;
+    font-size: 25px;
+}
+
+#Experience_Projects {
+    position: fixed;
+    font-size: 20px;
+    top: 425px;
+    left: 220px;
+}
+
+#About_Me {
+    position: fixed;
+    font-size: 20px;
+    top: 375px;
+    left: 220px;
+}
+
+#Resume_Contact {
+    position: fixed;
+    font-size: 20px;
+    top: 475px;
+    left: 220px;
+}
+
+.section-2 nav a {
+    text-decoration: none;
+}
+
+.section-2 nav a:hover,
+.section-2 nav a.active {
+    transform-origin: left;
+    transform: scale(1.5);
+    text-decoration: underline;
+    text-decoration-color: #f59e0b;
+    color: #e2e3e4;
+    text-shadow: 0px 0px 1px #f59e0b;
+    transition-duration: 0.5s;
+}
+
+.scroll {
+    color: #a5a5a5;
+    transition: text-decoration-color 300ms;
+    display: inline-block;
+}
+
+
+
+
+.left-side {
+    display: flex;
+    width: 40%;
+    float: left;
+}
+
+.headers {
+    color: #e2e3e4;
+    margin-top: 200px;
+    font-size: xx-large;
+}
+
+
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60%;
+    float: right;
+}
+
+
+.right-side section a {
+    text-decoration: none;
+}
+
+
+.right-side section a.active {
+    transition-duration: 1s;
+    transform-origin: bottom;
+    scale: 1.2;
+    text-shadow: 0px 0px 25px #f59e0b;
+}
+
+#AboutMe {
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: inherit;
+    align-items: center;
+    scroll-margin: 75px;
+
+}
+
+
+#intro {
+    margin-bottom: 25px;
+    display: flex;
+    color: #acb3be;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+}
+
+
+
+
+#ExperienceProjects {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+    display: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+
+    scroll-margin: 50px;
+
+}
+
+
+.projects {
+    margin-bottom: 25px;
+    align-items: center;
+    display: flex;
+}
+
+.projects:hover {
+    transform-origin: left;
+    scale: 1.1;
+}
+
+.text h3 {
+    text-decoration: underline;
+    text-decoration-color: #f59e0b;
+}
+
+.text {
+    padding-left: 25px;
+    color: #e2e3e4;
+}
+
+.text p {
+    width: 400px;
+}
+
+
+
+
+.projects img {
+    border: 1px solid #e2e3e4;
+    border-radius: 20px;
+    height: 80px;
+    width: auto;
+
+}
+
+
+
+
+#ResumeContact {
+
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    display: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+    scroll-margin: 50px;
+    flex-direction: column;
+
+}
+
+
+#Resumepdf {
+    margin-bottom: 25px;
+    align-items: center;
+    display: flex;
+}
