@@ -310,7 +310,7 @@ input:checked+.slider:before {
     height: 800px;
     flex-direction: column;
     display: inherit;
-    align-items: start;
+    align-items: center;
     justify-content: space-evenly;
 }
 
