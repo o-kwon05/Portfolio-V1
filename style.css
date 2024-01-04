@@ -304,17 +304,6 @@ input:checked+.slider:before {
 
 }
 
-#project-alligner {
-    position: relative;
-    width: 50%;
-    height: 800px;
-    flex-direction: column;
-    display: inherit;
-    align-items: start;
-    justify-content: space-evenly;
-}
-
-
 .projects {
     margin-bottom: 25px;
     align-items: center;
