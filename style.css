@@ -300,7 +300,7 @@ input:checked+.slider:before {
     display: inherit;
     align-items: center;
     justify-content: space-evenly;
-    scroll-margin: 50px;
+    scroll-margin: -100px;
 
 }
 
@@ -333,8 +333,6 @@ input:checked+.slider:before {
 
 
 .projects img {
-    border: 1px solid #e2e3e4;
-    border-radius: 20px;
     height: 80px;
     width: auto;
 
@@ -351,7 +349,7 @@ input:checked+.slider:before {
     display: inherit;
     align-items: center;
     justify-content: space-evenly;
-    scroll-margin: 50px;
+    scroll-margin: -200px;
     flex-direction: column;
 
 }
